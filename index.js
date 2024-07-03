@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
     // Establecer el encabezado de la respuesta
     res.writeHead(200, {'Content-Type': 'text/html'});
     // Escribir la respuesta
-    res.end('<h1>¡Hola Mundo desde Node.js!</h1>');
+    res.end('<h1>¡Hola Mundo desde DAVID.js!</h1>');
 });
 
 // Escuchar en el puerto 3000
