@@ -1,15 +1,14 @@
-// app.js
-const http = require('http');
+// index.js
+const express = require('express');
+const app = express();
 
-// Crear un servidor HTTP
-const server = http.createServer((req, res) => {
-    // Establecer el encabezado de la respuesta
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    // Escribir la respuesta
-    res.end('<h1>¡Hola Mundo desde DAVID.js!</h1>');
+// Ruta para la página principal
+app.get('/', (req, res) => {
+    res.send('<h1>¡Hola Mundo - DAVID MACHADO!</h1>');
 });
 
-// Escuchar en el puerto 3000
-server.listen(3000, () => {
-    console.log('Servidor iniciado en http://localhost:3000/');
+// Escuchar en el puerto adecuado
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor iniciado en http://localhost:${PORT}/`);
 });
